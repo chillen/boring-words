@@ -13,10 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('keyup', function (e) {
     if (e.keyCode === 38) {
+      e.preventDefault()
       good.push(word)
       word = words[Math.floor(Math.random() * words.length)]
     }
     if (e.keyCode === 40) {
+      e.preventDefault()
       bad.push(word)
       word = words[Math.floor(Math.random() * words.length)]
     }
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
 
-  var hammertime = new Hammer(document.querySelector('body'))
+  var hammertime = new Hammer(document.querySelector('html'))
   hammertime.on('swipeleft', function (ev) {
     bad.push(word)
     word = words[Math.floor(Math.random() * words.length)]
