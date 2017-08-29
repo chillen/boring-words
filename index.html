@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="taggedwordcorpus.json"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+      <div class="contain">
+        <span id='worddisplay'></span>
+        <p>If a word is interesting, swipe right or click the up arrow key.</p>
+        <p>If a word is boring, swipe left or click the down arrow key.</p>
+        <button onclick='export_csv();return false;'>Get CSV</button>
+      </div>
+  </body>
+</html>
+
